@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where are NYC restaurant locations?</title>
+    <script type="module" crossorigin src="./assets/index-DsJbqck4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-ZFZ4aSjW.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <p class="eyebrow">New York City restaurants</p>
+        <h1>Where are NYC restaurant locations?</h1>
+        <p>Each point marks a location. Different restaurants can share the same coordinates (for example in one building), so they share a marker.</p>
+        <p class="data-badge">Data: NYC restaurant inspections, downloaded on 25 October 2026.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="filters">
+        <div class="filter-row">
+          <span class="filter-name">Borough</span>
+          <div id="borough" class="chips"></div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-name">Cuisine</span>
+          <details id="cuisine-menu">
+            <summary id="cuisine-summary">All cuisines</summary>
+            <div id="cuisine" class="menu"></div>
+          </details>
+          <p class="counts"><b id="shown-count">-</b> unique restaurants shown, <b id="excluded-count">-</b> not on the map (no coordinates)</p>
+          <button id="clear" type="button">Clear filters</button>
+          <button id="reset-view" type="button">Reset view</button>
+        </div>
+      </section>
+
+      <div id="map"></div>
+
+      <p class="source">Restaurant inspection data: <a href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j/about_data">NYC Department of Health and Mental Hygiene via NYC Open Data</a>. Locations are deduplicated by restaurant ID (CAMIS); only restaurants with coordinates are shown (the source has some empty or set to 0). Basemap © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Data retrieved on 25 October 2026.</p>
+    </main>
+
+  </body>
+</html>
